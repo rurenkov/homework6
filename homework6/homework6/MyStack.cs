@@ -15,6 +15,36 @@ namespace homework6
 
 
         //*******************************************************//
+        // EMPTY stack;
+        //*******************************************************//
+
+        public override bool IsEmpty()
+        {
+
+            if (top == 0)
+            {
+                Console.WriteLine("stack is empty");
+
+            }
+            return true;
+        }
+        //*******************************************************//
+        // is FULL  stack;
+        //*******************************************************//
+
+        public override bool IsFull()
+        {
+
+            if (top > Array.Length)
+            {
+                Console.WriteLine("Stack is full");
+            }
+            return true;
+        }
+
+
+
+        //*******************************************************//
         // push method;
         //*******************************************************//
         public void Push(int put)

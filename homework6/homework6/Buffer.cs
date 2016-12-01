@@ -29,33 +29,32 @@ namespace homework6
         //*******************************************************//
         // IS FULL method;
         //*******************************************************//
-        public static bool IsFull(int free)
+        public virtual bool IsFull()
         {
-
-            if (free <= 0)
-            {
-                Console.WriteLine("QUEUE is full");
-            }
             return true;
         }
         //*******************************************************//
         // IS EMPTY method;
         //*******************************************************//
-        public static bool IsEmpty(int free, int Buffsize)
+        public virtual bool IsEmpty()
         {
 
-            if (free == Buffsize)
-            {
-                Console.WriteLine("QUEUE is empty");
-            }
-            return true;
+           return true;
         }
 
-        public static void Print(int[] Array)
+        public virtual void Print(int[] Array)
         {
 
             Console.WriteLine("[{0}]", string.Join(", ", Array));
 
+        }
+
+        public virtual void ParceD(ref int d)
+        {
+            while (!int.TryParse(Console.ReadLine(), out d))
+            {
+                Console.WriteLine("Try again..");
+            }
         }
 
     }
